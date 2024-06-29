@@ -264,3 +264,8 @@ forge script --broadcast \
 script/deployParameters/DeployUniversalRouter.s.sol:DeployUniversalRouter \
 <pathToJSON>
 ```
+
+
+### Deploy for Taraxa chain
+
+Install foundry nightly-5b7e4cb3c882b28f3c32ba580de27ce7381f415a

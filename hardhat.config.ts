@@ -4,6 +4,8 @@ import '@nomicfoundation/hardhat-chai-matchers'
 import dotenv from 'dotenv'
 dotenv.config()
 
+const taraxaPk = process.env.TARAXA_PK || '';
+
 const DEFAULT_COMPILER_SETTINGS = {
   version: '0.8.17',
   settings: {
@@ -31,6 +33,18 @@ export default {
         url: `https://mainnet.infura.io/v3/${process.env.INFURA_API_KEY}`,
         blockNumber: 15360000,
       },
+    },
+    taraxa: {
+      url: 'https://rpc.mainnet.taraxa.io',
+      chainId: 841,
+      accounts: [taraxaPk],
+      hardfork: 'berlin'
+    },
+    taraxa_testnet: {
+      url: 'https://rpc.testnet.taraxa.io',
+      chainId: 842,
+      accounts: [taraxaPk],
+      hardfork: 'berlin',
     },
     mainnet: {
       url: `https://mainnet.infura.io/v3/${process.env.INFURA_API_KEY}`,
